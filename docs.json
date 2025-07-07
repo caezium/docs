@@ -1,17 +1,18 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "linden",
+  "name": "KoalaLog",
+  "description": "KoalaLog is a logging framework for FTC robots, enabling rich telemetry and data capture with .wpilog files compatible with Advantage Scope.",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#A3C9A8",
+    "dark": "#4B5A60"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/fav.png",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": " ",
         "groups": [
           {
             "group": "Get Started",
@@ -20,37 +21,6 @@
               "quickstart",
               "development"
             ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
           }
         ]
       }
@@ -58,45 +28,88 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "GitHub",
+          "href": "https://github.com/ori-coval/Koala-Log",
+          "icon": "github"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Discord",
+          "href": "https://discord.gg/XunReBq5",
+          "icon": "discord"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/text.png",
+    "dark": "/logo/text.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "GitHub",
+        "href": "https://github.com/ori-coval/Koala-Log"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Discord",
+      "href": "https://discord.gg/XunReBq5"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/ori-coval/Koala-Log",
+      "discord": "https://discord.gg/XunReBq5"
+    },
+    "links": [
+      {
+        "header": "Resources",
+        "items": [
+          {
+            "label": "Wiki",
+            "href": "https://github.com/ori-coval/Koala-Log/wiki"
+          },
+          {
+            "label": "Releases",
+            "href": "https://github.com/ori-coval/Koala-Log/releases"
+          }
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "indexing": "navigable",
+    "canonical": "https://yourdomain.com",
+    "metatags": {
+      "title": "KoalaLog – FTC Robot Logging Framework",
+      "description": "KoalaLog is a logging framework for FTC robots, enabling rich telemetry and data capture with .wpilog files compatible with Advantage Scope.",
+      "keywords": "FTC, logging, telemetry, robots, KoalaLog, Advantage Scope, FRC, Control Hub, Java, wpilog",
+      "author": "KoalaLog Team",
+      "robots": "index, follow",
+      "googlebot": "index, follow",
+      "google": "notranslate",
+      "generator": "Mintlify",
+      "theme-color": "#16A34A",
+      "color-scheme": "light dark",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "referrer": "origin",
+      "language": "en",
+      "copyright": "Copyright 2025 KoalaLog",
+      "category": "Technology",
+      "application-name": "KoalaLog",
+      "og:title": "KoalaLog – FTC Robot Logging Framework",
+      "og:description": "KoalaLog enables FTC teams to capture, analyze, and visualize robot telemetry with ease.",
+      "og:type": "website",
+      "og:url": "https://koala-28d89e69.mintlify.app/",
+      "og:site_name": "KoalaLog",
+      "og:locale": "en_US",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "KoalaLog – FTC Robot Logging Framework",
+      "twitter:description": "KoalaLog enables FTC teams to capture, analyze, and visualize robot telemetry with ease."
     }
+  },
+  "search": {
+    "prompt": "Search..."
   }
 }

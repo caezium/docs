@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# Local environment
+.env
+.env.*
+
+# Mintlify local cache
+.mintlify/
+
+# Cursor editor
+.cursor/
+
+# Misc
+*.log 
