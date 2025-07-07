@@ -1,71 +1,80 @@
 ---
-title: Introduction
-description: "Welcome to the home of your new documentation"
+title: "KoalaLog"
+sidebarTitle: "Overview"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.png"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.png"
-  alt="Hero Dark"
-/>
+<Note>
+  KoalaLog is a logging framework for FTC robots that generates `.wpilog` files
+  fully compatible with [Advantage Scope](https://docs.advantagescope.org). It
+  enables rich telemetry and data capture—just like in FRC.
+</Note>
 
-## Setting up
+# Why Choose KoalaLog?
 
-The first step to world-class documentation is setting up your editing environments.
+Logging key metrics—like elevator height, PID controller outputs, target setpoints, and autonomous states—helps you:
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+- Quickly tune your robot systems
+- Diagnose issues mid-practice
+- Perform detailed analysis after matches
 
-## Make it yours
+All with minimal boilerplate, and full compatibility with AdvantageScope and FTC Dashboard.
 
-Update your docs to your brand and add valuable content for the best user conversion.
+# What You Can Do
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+- **Automatically log telemetry** using `@AutoLog` annotations—no manual data handling needed
+- **Visualize and analyze logs** in [AdvantageScope](https://github.com/Mechanical-Advantage/AdvantageScope)
+- **Stream live data** to the FTC Dashboard
+- **Mix manual logging** when you need fine-grained control
+- **Retrieve `.wpilog` logs** from your robot using prebuilt ADB executables
+
+# Project Structure
+
+- `KoalaLogger`: Core runtime library for robot code
+- `KoalaLoggingProcessor`: Annotation processor for generating logging boilerplate
+- `LogPuller`: Tools to retrieve logs from the Control Hub
+- `LogPullerDevelopment`: Scripts for building log puller tools
+
+# Installation
+
+## 1️⃣ Add the JitPack Repository
+
+In your `TeamCode/build.gradle` file, add the following **below the `android` block**:
+
+```groovy
+android {
+    // your existing config...
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
+
+## 2️⃣ Add the Dependencies
+
+Still in `TeamCode/build.gradle`, add the following inside the `dependencies` block:
+
+```groovy
+dependencies {
+    implementation 'com.github.ori-coval.Koala-Log:KoalaLogger:<version>'
+    annotationProcessor 'com.github.ori-coval.Koala-Log:KoalaLoggingProcessor:<version>'
+}
+```
+
+> 🔁 Replace `<version>` with the latest version:  
+> [![](https://jitpack.io/v/ori-coval/Koala-Log.svg)](https://jitpack.io/#ori-coval/Koala-Log)
+
+## ⚠️ Required: FTC Dashboard
+
+This logger uses [FTC Dashboard](https://github.com/acmerobotics/ftc-dashboard) to post live values.
+You **must** add FTC Dashboard to your project for it to work correctly. Follow the official instructions here:  
+📚 [How to Add FTC Dashboard](https://github.com/acmerobotics/ftc-dashboard?tab=readme-ov-file#basic)
+
+# Get Involved
+
+- **Try it out:** add KoalaLog to your project and experiment
+- **Give feedback:** report bugs, feature requests, or usability notes
+- **Join the effort:** contributions are more than welcome!
+- Join the Discord: https://discord.gg/XunReBq5
+
+Want to improve or contribute? Found a bug? Open an issue or a pull request on [GitHub](https://github.com/ori-coval/Koala-Log).

@@ -18,8 +18,17 @@
             "group": "Get Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              {
+                "group": "Usage",
+                "pages": [
+                  "usage/setup",
+                  "usage/auto-logging",
+                  "usage/manual-logging",
+                  "usage/log-retrieval",
+                  "usage/advanced-features"
+                ]
+              },
+              "faq"
             ]
           }
         ]
